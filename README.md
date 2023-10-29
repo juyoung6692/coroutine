@@ -10,10 +10,12 @@ CoroutineScope().launch{}
 
 <h2>rountine - coroutine</h2>
 **runBlocking**: 새로운 코루틴 생성 (runBlocking 코드가 모두 끝날 때 까지 스레드가 blocking 됨)</br>
+
 `runBlocking: 코루틴을 만들고 싶을 때 마다 사용하지 말고 프로그램에 진입할 때 최초로 사용(코루틴의 세계로 이어줌)`</br>
+
 **launch**: 반환 값이 없는 coroutine 생성(만들어진 coroutine을 바로 실행시키지 않음)</br>
 **async**: 함수 결과 반환 coroutine(`await()`: async의 결과를 가져옴)
-**suspend fun**: 다른 suspend 함수 호출
+**suspend fun**: 다른 suspend 함수 호출</br>
 ex) yield() - suspend 함수, 스레드 양보
 delay() - 특정 시간 동안 멈추고 다른 코루틴에 넘김
 
@@ -44,7 +46,8 @@ routine | coroutine
 - kotlinx.coroutines 패키지에 있는 함수 사용시 취소 가</br>
 ex)delay(), yield()
 - 코루틴 스스로 본인의 상태를 확인해 CancellationException 던지기</br>
-`코루틴 내부에서 isActive로 본인의 상태 확인 가능`
+
+` 코루틴 내부에서 isActive로 본인의 상태 확인 가능 `
 
 <b>async</b> 
 - root coroutine 일 경우 예외 발생 시 예외 출력 않고 await()사용시 예외 확인 가능
@@ -57,7 +60,7 @@ CoroutineExceptionHandler
 - 코루틴에서 발생한 exception을 처리
 - launch에만 적용 가능
 - 부모 코루틴 존재시 동작 X
-`자식 코루틴의 예외는 부모에게 전파됨(SuperviserJob() 사용 시 예외 전파 막ㅋ)`
+`자식 코루틴의 예외는 부모에게 전파됨(SuperviserJob() 사용 시 예외 전파 막음)`
 
   
 CancellationException | 그외 Exception
