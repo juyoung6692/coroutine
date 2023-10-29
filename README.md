@@ -29,6 +29,7 @@ routine | coroutine
 
 <h2>Thread - coroutine</h2>
 **Thread** 
+
 + 프로세스에 소속되어 여러 코드를 동시에 실행
 + 프로세스가 있어야만 존재
 + 스레드가 프로세스를 바꿀 수 없음
