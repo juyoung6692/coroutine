@@ -9,6 +9,7 @@ CoroutineScope().launch{}
 ~~~
 
 <h2>rountine - coroutine</h2>
+
 **runBlocking**: 새로운 코루틴 생성 (runBlocking 코드가 모두 끝날 때 까지 스레드가 blocking 됨)</br>
 
 `runBlocking: 코루틴을 만들고 싶을 때 마다 사용하지 말고 프로그램에 진입할 때 최초로 사용(코루틴의 세계로 이어줌)`</br>
@@ -28,6 +29,7 @@ routine | coroutine
 
 
 <h2>Thread - coroutine</h2>
+
 **Thread** 
 
 + 프로세스에 소속되어 여러 코드를 동시에 실행
@@ -38,6 +40,7 @@ routine | coroutine
 
 
 **Coroutine**
+
 + 코루틴의 코드가 실행 되려면 스레드가 있어야함
 + 중단 되었다가 재개 될때 다른 스레드에 배정 될 수 있음
 + `context switching`: 동일 스레드에서 coroutine이 실행되면 메모리 전부를 공유하므로 스레드 보다 비용이 적음</br>(하나의 스레드에서 동시성 확보 - 아주 빠르게 작업이 전환 됨)
