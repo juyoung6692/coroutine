@@ -44,11 +44,13 @@ routine | coroutine
 + 비선점형
 
 <h2>코루틴 취소</h2>
-- kotlinx.coroutines 패키지에 있는 함수 사용시 취소 가</br>
+
+- kotlinx.coroutines 패키지에 있는 함수 사용시 취소 가능</br>
 ex)delay(), yield()
 - 코루틴 스스로 본인의 상태를 확인해 CancellationException 던지기</br>
 
 ` 코루틴 내부에서 isActive로 본인의 상태 확인 가능 `
+
 
 <b>async</b> 
 - root coroutine 일 경우 예외 발생 시 예외 출력 않고 await()사용시 예외 확인 가능
@@ -56,6 +58,7 @@ ex)delay(), yield()
 
 <b>launch</b> 
 - 에외 발생시 바로 예외 출력 및 코루틴 종료
+
 
 CoroutineExceptionHandler 
 - 코루틴에서 발생한 exception을 처리
