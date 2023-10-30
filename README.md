@@ -15,7 +15,7 @@ CoroutineScope().launch{}
 `runBlocking: 코루틴을 만들고 싶을 때 마다 사용하지 말고 프로그램에 진입할 때 최초로 사용(코루틴의 세계로 이어줌)`</br>
 
 **launch**: 반환 값이 없는 coroutine 생성(만들어진 coroutine을 바로 실행시키지 않음)</br>
-**async**: 함수 결과 반환 coroutine(`await()`: async의 결과를 가져옴)
+**async**: 함수 결과 반환 coroutine(`await()`: async의 결과를 가져옴)</br>
 **suspend fun**: 다른 suspend 함수 호출</br>
 ex) yield() - suspend 함수, 스레드 양보
 delay() - 특정 시간 동안 멈추고 다른 코루틴에 넘김
