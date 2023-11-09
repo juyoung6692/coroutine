@@ -10,10 +10,10 @@ CoroutineScope().launch{}
 
 <h2>rountine - coroutine</h2>
 **runBlocking**: 새로운 코루틴 생성 (runBlocking 코드가 모두 끝날 때 까지 스레드가 blocking 됨)</br>
-`runBlocking: 코루틴을 만들고 싶을 때 마다 사용하지 말고 프로그램에 진입할 때 최초로 사용(코루틴의 세계로 이어줌)`</br>
+`runBlocking: 코루틴을 만들고 싶을 때 마다 사용하지 말고 프로그램에 진입할 때 최초로 사용(코루틴의 세계로 이어줌, coroutine scope 제공)`</br>
 **launch**: 반환 값이 없는 coroutine 생성(만들어진 coroutine을 바로 실행시키지 않음)</br>
 **async**: 함수 결과 반환 coroutine(`await()`: async의 결과를 가져옴)
-**suspend fun**: 다른 suspend 함수 호출
+**suspend fun**: 다른 suspend 함수 호출</br>
 ex) yield() - suspend 함수, 스레드 양보
 delay() - 특정 시간 동안 멈추고 다른 코루틴에 넘김
 
@@ -69,5 +69,10 @@ Coroutines.LAZY: 시작신호를 줄 때 까지 코루틴 실행 대기</br>
 Dispatchers.Default: 다른 스레드에서 코루틴 실행
 ~~~
 
+Structured Concurrency
+- 부모-자식 관계의 코루틴이 한 몸 처럼 움직이는것
+- 수많은 코루틴이 유실되거나 누수되지 않도록 보장
+- 에러가 전파될 수 있도록 보장 
+- 
 
 
