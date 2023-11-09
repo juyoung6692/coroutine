@@ -100,3 +100,6 @@ Dispatchers.Main | - UI 관련 의존성 필요
 ~~~
 Executor Service를 asCoroutineDispatcher() 함수 활용하여 dispatcher로 
 ~~~
+
+Suspending Function
+- 코루틴이 중지 되었다가 재개 될 수 있는 지점
