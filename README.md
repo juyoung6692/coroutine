@@ -83,3 +83,16 @@ Structured Concurrency
 - 자식 코루틴에서 예외 발생시 부모에게 전파, 또 그 자식 코루틴에 전파
 - 코루틴이 유실되거나 누수되지 않도록 보장
 
+Coroutine Scope
+- Coroutine 이 탄생할 수 있는 영역
+- Coroutine context 데이터를 보관
+`coroutine context: 코루틴과 관련된 데이터를 보관 (CoroutineExceptionHandler, 코루틴 이름, coroutine dispatcher ...)`
+
+Coroutine Dispatcher
+- 코루틴을 스레드에 배정하는 역할
+
+Dispatcher | *
+--------- | ---------
+Dispatchers.Default</br>(default) | - 가장 기본적인 디스패처</br>- CPU 자원을 많이 쓸 때 권장
+Dispatchers.Default | - IO 작업에 최적화
+Dispatchers.Main | - UI 관련 의존성 필요
