@@ -103,3 +103,10 @@ Executor Service를 asCoroutineDispatcher() 함수 활용하여 dispatcher로
 
 Suspending Function
 - 코루틴이 중지 되었다가 재개 될 수 있는 지점
+
+~~~
+* suspend 함수 *
+coroutineScope
+추가적인 코루틴을 만들어주고, 주어진 함수 블록이 바로 실행된다.
+만들어진 코루틴이 완료되면 다음 코드로 넘어간다
+~~~
