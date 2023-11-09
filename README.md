@@ -106,7 +106,9 @@ Suspending Function
 
 ~~~
 * suspend 함수 *
-coroutineScope
-추가적인 코루틴을 만들어주고, 주어진 함수 블록이 바로 실행된다.
-만들어진 코루틴이 완료되면 다음 코드로 넘어간다
+ coroutineScope
+  - 추가적인 코루틴을 만들어주고, 주어진 함수 블록이 바로 실행된다.
+  - 만들어진 코루틴이 완료되면 다음 코드로 넘어간다.
+ withContext
+  - context 변화를 주는 기능 추적으로 있음
 ~~~
