@@ -1,4 +1,5 @@
 import kotlinx.coroutines.*
+import java.lang.Exception
 
 fun main() = runBlocking {
     printWithThread("START")
@@ -7,8 +8,9 @@ fun main() = runBlocking {
 }
 
 suspend fun calculateResult2() = withContext(Dispatchers.Default) {//완전히 종료 될 떄 까지 다음 코드로 넘어가지 않음
-    val num1 = async {
+    val num1 = async(SupervisorJob()) {
         delay(1000)
+        throw Exception()
         printWithThread(coroutineContext)
         100
     }
@@ -18,6 +20,4 @@ suspend fun calculateResult2() = withContext(Dispatchers.Default) {//완전히 �
         printWithThread(coroutineContext)
         200
     }
-
-    num1.await() + num2.await()
 }

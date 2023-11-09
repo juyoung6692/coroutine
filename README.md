@@ -67,7 +67,8 @@ CoroutineExceptionHandler
 - 코루틴에서 발생한 exception을 처리
 - launch에만 적용 가능
 - 부모 코루틴 존재시 동작 X
-`자식 코루틴의 예외는 부모에게 전파됨(SuperviserJob() 사용 시 예외 전파 막음)`
+
+`자식 코루틴의 예외는 부모에게 전파됨(SuperviserJob() 사용 시 예외 전파 막음) await() 사용시에 에러를 받아봄`
 
   
 CancellationException | 그외 Exception
@@ -111,4 +112,6 @@ Suspending Function
   - 만들어진 코루틴이 완료되면 다음 코드로 넘어간다.
  withContext
   - context 변화를 주는 기능 추적으로 있음
+ withTimeOut/withTimeOutOrNull
+  - 주어진 시간안에 코루틴이 완료되지 못하면 예외/null 을 던짐
 ~~~
