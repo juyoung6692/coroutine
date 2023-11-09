@@ -96,3 +96,7 @@ Dispatcher | *
 Dispatchers.Default</br>(default) | - 가장 기본적인 디스패처</br>- CPU 자원을 많이 쓸 때 권장
 Dispatchers.Default | - IO 작업에 최적화
 Dispatchers.Main | - UI 관련 의존성 필요
+
+~~~
+Executor Service를 asCoroutineDispatcher() 함수 활용하여 dispatcher로 
+~~~
